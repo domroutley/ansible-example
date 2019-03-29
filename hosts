@@ -1,28 +1,11 @@
 ---
-[servers:children]
-webServers
-dbServers
-cicdServers
-
-[webServers:children]
-europeWebCluster
-asiaWebCluster
-americaWebCluster
-
-[europeWebCluster]
-192.0.2.11
-192.0.2.12
-
-[asiaWebCluster]
+[servers]
 192.0.2.13
 192.0.2.14
 
-[americaWebCluster]
-192.0.2.15
-192.0.2.16
+[servers:children]
+webServers
 
-[dbServers]
-192.0.2.21
-
-[cicdServers]
-192.0.2.31
+[webServers]
+192.0.2.11
+192.0.2.12
