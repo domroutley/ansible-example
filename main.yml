@@ -3,6 +3,9 @@
   hosts: servers
   become: yes
   remote_user: ubuntu
+  vars:
+    - http_port: 80
+  
 
   tasks:
     - name: Update system packages
