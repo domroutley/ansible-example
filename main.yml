@@ -3,8 +3,9 @@
   hosts: servers
   become: yes
   remote_user: ubuntu
-  vars:
-    - http_port: 80
+  vars_prompt:
+      - name: "http_port"
+        prompt: "HTTP Port number"
   
 
   tasks:
